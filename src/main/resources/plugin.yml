@@ -1,0 +1,4 @@
+name: student-miniproject
+version: '1.0-SNAPSHOT'
+main: me.candidate.miniproject.MiniProjectPlugin
+api-version: '1.21'

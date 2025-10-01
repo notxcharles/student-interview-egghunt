@@ -1,0 +1,10 @@
+services:
+  db:
+    container_name: mysql
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+      MARIADB_DATABASE: myapp  # Creates a database
+    ports:
+      - "3306:3306"
