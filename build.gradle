@@ -40,6 +40,10 @@ tasks {
     runServer {
         minecraftVersion("1.21")
 
+        downloadPlugins {
+            modrinth("luckperms", "ZPtLedoF")
+        }
+
         // Automatically accept Mojang EULA
         jvmArgs("-Dcom.mojang.eula.agree=true")
     }
