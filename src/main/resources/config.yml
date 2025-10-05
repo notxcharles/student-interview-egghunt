@@ -1,0 +1,16 @@
+permission: "miniproject.egghunt.claim"
+hunts:
+  - id: "egg1"
+    world: "world"
+    x: 5
+    y: 69
+    z: -9
+    rewardCommand: "give {player} diamond 1"
+    claimMessage: "&aYou found egg 1! Here's a diamond!"
+  - id: "egg2"
+    world: "world"
+    x: 10
+    y: 69
+    z: -12
+    rewardCommand: "give {player} emerald 1"
+    claimMessage: "&aYou found egg 2! Here is an emerald!"
