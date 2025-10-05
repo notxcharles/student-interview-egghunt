@@ -2,6 +2,7 @@ package me.candidate.miniproject;
 
 import me.candidate.miniproject.command.EggHuntCommands;
 import me.candidate.miniproject.config.EggHuntConfig;
+import me.candidate.miniproject.listener.BlockInteractListener;
 import me.candidate.miniproject.scaffold.command.CommandScaffold;
 import me.candidate.miniproject.scaffold.command.example.ExampleCommand;
 import me.candidate.miniproject.scaffold.config.ConfigScaffold;
@@ -71,8 +72,15 @@ public final class MiniProjectPlugin extends JavaPlugin {
 
         commandScaffold.registerAnnotatedCommand(new EggHuntCommands(this));
         configScaffold.initConfigs(EggHuntConfig.class);
-        new EggHuntStorageHandler(this);
 
+        EggHuntStorageHandler storageHandler = new EggHuntStorageHandler(this);
+
+        getServer().getPluginManager().registerEvents(
+                new BlockInteractListener(this, storageHandler),
+                this
+        );
+
+        getLogger().info("EggHunt plugin enabled!");
 
     }
 
