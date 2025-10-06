@@ -14,3 +14,10 @@ hunts:
     z: -12
     rewardCommand: "give {player} emerald 1"
     claimMessage: "&aYou found egg 2! Here is an emerald!"
+  - id: "egg3"
+    world: "world"
+    x: 12
+    y: 70
+    z: -11
+    rewardCommand: "give {player} emerald 3"
+    claimMessage: "&aYou found egg 3! Here is 3 emeralds!"
