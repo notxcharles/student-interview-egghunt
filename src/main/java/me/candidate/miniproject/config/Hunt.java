@@ -5,6 +5,7 @@ import org.spongepowered.configurate.objectmapping.ConfigSerializable;
 public class Hunt {
     private String egg_id;
 
+    private String world;
     private int x;
     private int y;
     private int z;
@@ -22,6 +23,7 @@ public class Hunt {
         return egg_id;
     }
 
+    public String GetWorld() { return world; }
     public int GetX()
     {
         return x;

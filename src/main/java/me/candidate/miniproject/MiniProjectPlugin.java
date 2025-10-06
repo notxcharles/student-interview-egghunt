@@ -80,6 +80,11 @@ public final class MiniProjectPlugin extends JavaPlugin {
                 this
         );
 
+        EggHuntManager eggManager = new EggHuntManager(this);
+        getServer().getScheduler().runTaskLater(this, () -> {
+            eggManager.placeAllEggs();
+        }, 20L); // Wait 1 second (20 ticks)
+
         getLogger().info("EggHunt plugin enabled!");
 
     }
